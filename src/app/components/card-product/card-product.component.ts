@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardProductComponent implements OnInit{
 // creacion del Input que recibe del compoente padre el array de productos
-  @Input() product = {
+  @Input() Product = {
     name: '',
     price: 0,
     description: '',
@@ -25,7 +25,7 @@ export class CardProductComponent implements OnInit{
   }
 
   addProduct() {
-    if(this.cantidad < this.product.inventory){
+    if(this.cantidad < this.Product.inventory){
       this.soldOut = false;
       this.cantidad++;
     } else {
@@ -41,4 +41,3 @@ export class CardProductComponent implements OnInit{
   }
 
 }
-
